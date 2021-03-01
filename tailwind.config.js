@@ -2,7 +2,7 @@ const colors = require("tailwindcss/colors");
 
 module.exports = {
   purge: {
-    enabled: true,
+    // enabled: true,
     content: ["./**/*.html", "./**/*.js"],
   },
   presets: [],
@@ -21,14 +21,14 @@ module.exports = {
 
       black: colors.black,
       white: colors.white,
-      gray: colors.coolGray,
+      gray: { ...colors.coolGray, 100: "#f9f9f9", 200: "#f1f1f1" },
       red: colors.red,
       yellow: colors.amber,
       green: colors.emerald,
-      blue: colors.blue,
+      blue: { ...colors.blue, 200: "#BCE7F0" },
       indigo: colors.indigo,
       purple: colors.violet,
-      pink: colors.pink,
+      pink: { ...colors.pink, 400: "#F9CADA" },
     },
     spacing: {
       px: "1px",
@@ -65,6 +65,7 @@ module.exports = {
       64: "16rem",
       72: "18rem",
       80: "20rem",
+      88: "22rem",
       96: "24rem",
     },
     animation: {
@@ -173,22 +174,7 @@ module.exports = {
       DEFAULT: "1",
     },
     fontFamily: {
-      sans: [
-        "ui-sans-serif",
-        "system-ui",
-        "-apple-system",
-        "BlinkMacSystemFont",
-        '"Segoe UI"',
-        "Roboto",
-        '"Helvetica Neue"',
-        "Arial",
-        '"Noto Sans"',
-        "sans-serif",
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-        '"Noto Color Emoji"',
-      ],
+      sans: ["'Open Sans', sans-serif"],
       serif: [
         "ui-serif",
         "Georgia",
@@ -517,6 +503,7 @@ module.exports = {
       20: "0.2",
       25: "0.25",
       30: "0.3",
+      35: "0.35",
       40: "0.4",
       50: "0.5",
       60: "0.6",
